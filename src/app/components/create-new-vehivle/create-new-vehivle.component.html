@@ -1,0 +1,38 @@
+<button (click)="initNewVehicle()" class="btn btn-primary">
+  Create New Vehicle
+</button>
+<button class="btn btn-primary m-2" routerLink="/vehiclebranding">Back</button>
+<!-- <table>
+  <thead>
+    <th>VehicleName</th>
+    <th>Chassis_Number</th>
+    <th>Engine</th>
+    <th>FuelCapacity</th>
+    <th>FuelReserveCapacity</th>
+    <th>MileagePerLit</th>
+    <th>CreatedOn</th>
+    <th>VehicleTypeName</th>
+    <th>SeatingCapacity</th>
+    <th>CreatedBy</th>
+    <th>TransmissionName</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehicle of vehicles">
+      <td>{{ vehicle.vehicleName }}</td>
+      <td>{{ vehicle.chassis_Number }}</td>
+      <td>{{ vehicle.engine }}</td>
+      <td>{{ vehicle.fuelCapacity }}</td>
+      <td>{{ vehicle.fuelReserveCapacity }}</td>
+      <td>{{ vehicle.mileagePerLit }}</td>
+      <td>{{ vehicle.createdOn }}</td>
+      <td>{{ vehicle.vehicleTypeName }}</td>
+      <td>{{ vehicle.seatCapacity }}</td>
+      <td>{{ vehicle.createdBy }}</td>
+      <td>{{ vehicle.transmissionName }}</td>
+    </tr>
+  </tbody>
+</table> -->
+<app-edit-vehicle
+  [vehicle]="vehicleToEdit"
+  (updatedVehicle)="updateVehicleList($event)"
+></app-edit-vehicle>

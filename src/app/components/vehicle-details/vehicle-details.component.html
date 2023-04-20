@@ -1,0 +1,36 @@
+<!-- <app-vehicle-details-by-id></app-vehicle-details-by-id> -->
+<button (click)="getDetails()" class="btn btn-primary">
+  Get VehicleDetails
+</button>
+<button class="btn btn-primary m-2" routerLink="/vehiclebranding">Back</button>
+
+<table id="customers" style="text-align: center">
+  <thead>
+    <th>VehicleName</th>
+    <th>Chassis_Number</th>
+    <th>Engine</th>
+    <th>FuelCapacity</th>
+    <th>FuelReserveCapacity</th>
+    <th>MileagePerLit</th>
+    <th>CreatedOn</th>
+    <th>VehicleTypeName</th>
+    <th>CreatedBy</th>
+    <th>ColorName</th>
+    <th>TransmissionName</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehicleDetails of vehicleDetail">
+      <td>{{ vehicleDetails.vehicleName }}</td>
+      <td>{{ vehicleDetails.viN_Number }}</td>
+      <td>{{ vehicleDetails.engine }}</td>
+      <td>{{ vehicleDetails.fuelCapacity }}</td>
+      <td>{{ vehicleDetails.fuelReserveCapacity }}</td>
+      <td>{{ vehicleDetails.mileagePerLit }}</td>
+      <td>{{ vehicleDetails.createdOn }}</td>
+      <td>{{ vehicleDetails.vehicleTypeName }}</td>
+      <td>{{ vehicleDetails.createdBy }}</td>
+      <td>{{ vehicleDetails.colorName }}</td>
+      <td>{{ vehicleDetails.transmissionName }}</td>
+    </tr>
+  </tbody>
+</table>

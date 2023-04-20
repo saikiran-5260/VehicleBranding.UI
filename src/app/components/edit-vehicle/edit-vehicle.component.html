@@ -1,0 +1,115 @@
+<div *ngIf="vehicle">
+  <div class="col-12">
+    <div class="col-3">
+      VehiclenName:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.vehicleName"
+        placeholder="VehicleName"
+      />
+    </div>
+    <div class="col-3">
+      VIN_Number:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.viN_Number"
+        placeholder="Chassis_Number"
+      />
+    </div>
+    <div class="col-3">
+      Engine:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.engine"
+        placeholder="Engine"
+      />
+    </div>
+    <div class="col-3">
+      FuelCapacity:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.fuelCapacity"
+        placeholder="FuelCapacity"
+      />
+    </div>
+    <div class="col-3">
+      FuelReserveCapacity:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.fuelReserveCapacity"
+        placeholder="FuelReserveCapacity"
+      />
+    </div>
+    <div class="col-3">
+      MileagePerLit:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.mileagePerLit"
+        placeholder="MileagePerLit"
+      />
+    </div>
+    <div class="col-3">
+      CreatedOn:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.createdOn"
+        placeholder="CreatedOn"
+      />
+      <!-- <div class="input-group">
+        <input
+          class="form-control"
+          placeholder="yyyy-mm-dd"
+          name="dp"
+          [(ngModel)]="vehicle.createdOn"
+          ngbDatepicker
+          #d="ngbDatepicker"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary calendar"
+            (click)="d.toggle()"
+            type="button"
+          ></button>
+        </div>
+      </div> -->
+    </div>
+    <div class="col-3">
+      VehicleTypeName:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.vehicleTypeName"
+        placeholder="VehicleTypeName"
+      />
+    </div>
+    <div class="col-3">
+      SeatCapacity:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.seatCapacity"
+        placeholder="SeatCapacity"
+      />
+    </div>
+    <div class="col-3">
+      CreatedBy:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.createdBy"
+        placeholder="CreatedBy"
+      />
+    </div>
+    <div class="col-3">
+      TransmissionName:
+      <input
+        class="form-control"
+        [(ngModel)]="vehicle.transmissionName"
+        placeholder="TransmissionName"
+      />
+    </div>
+
+    <button (click)="updateVehicle(vehicle)" *ngIf="vehicle">Save Edit</button>
+    <button (click)="deleteVehicle(vehicle)" *ngIf="vehicle">Delete</button>
+    <button (click)="createVehicle(vehicle)" *ngIf="!vehicle.vehicleId">
+      Create New Vechile
+    </button>
+  </div>
+</div>

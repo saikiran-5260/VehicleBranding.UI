@@ -1,0 +1,56 @@
+<div>
+  Enter VehicleId:
+  <input [(ngModel)]="vehicleId" />
+  <button (click)="getById(vehicleId)" class="btn btn-primary m-2">
+    Get Vehicle By Id
+  </button>
+  <button class="btn btn-primary m-2" routerLink="/vehiclebranding">
+    Back
+  </button>
+  <table id="customers" style="text-align: center">
+    <thead>
+      <th>VehicleName</th>
+      <th>Chassis_Number</th>
+      <th>Engine</th>
+      <th>FuelCapacity</th>
+      <th>FuelReserveCapacity</th>
+      <th>MileagePerLit</th>
+      <th>CreatedOn</th>
+      <th>VehicleTypeName</th>
+      <th>SeatingCapacity</th>
+      <th>ColorName</th>
+      <th>CreatedBy</th>
+      <th>TransmissionName</th>
+      <th>Click Button</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehicleDetailsById of vehicleDetailById">
+        <td>{{ vehicleDetailsById.vehicleName }}</td>
+        <td>{{ vehicleDetailsById.viN_Number }}</td>
+        <td>{{ vehicleDetailsById.engine }}</td>
+        <td>{{ vehicleDetailsById.fuelCapacity }}</td>
+        <td>{{ vehicleDetailsById.fuelReserveCapacity }}</td>
+        <td>{{ vehicleDetailsById.mileagePerLit }}</td>
+        <td>{{ vehicleDetailsById.createdOn }}</td>
+        <td>{{ vehicleDetailsById.vehicleTypeName }}</td>
+        <td>{{ vehicleDetailsById.seatCapacity }}</td>
+        <td>{{ vehicleDetailsById.colorName }}</td>
+        <td>{{ vehicleDetailsById.createdBy }}</td>
+        <td>{{ vehicleDetailsById.transmissionName }}</td>
+        <td>
+          <button (click)="updateVehicle(vehicleDetailsById)">
+            updateVehicle
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- {{ vehicleDetail[0][0] | json }}
+{{ vehicleDetail[0][0].vehicleName }} -->
+<!-- {{ vehicleId }} -->
+<app-edit-vehicle
+  *ngIf="enableVechileEdit"
+  [vehicle]="vehicleToEdit"
+  [Id]="vehicleId"
+></app-edit-vehicle>
